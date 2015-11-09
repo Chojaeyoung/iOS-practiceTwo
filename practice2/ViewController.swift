@@ -17,13 +17,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        arrowButton.backgroundImageForState()
         butImage = UIImage(named:"arrow_red.png")
-
-
-//        let v = UIView()
-//        super.view = v
-//        v.backgroundColor = UIColor.whiteColor()
-
-
     }
 
     override func didReceiveMemoryWarning() {
