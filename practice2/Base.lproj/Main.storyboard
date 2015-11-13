@@ -50,9 +50,16 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="wG9-JU-P14"/>
+                    <navigationItem key="navigationItem" id="wG9-JU-P14">
+                        <barButtonItem key="rightBarButtonItem" title="처음으로" id="hVx-ki-9k2">
+                            <connections>
+                                <action selector="goBackFirstPage:" destination="BYZ-38-t0r" id="wq0-Z6-Mq4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="goBackFirstButton" destination="hVx-ki-9k2" id="SBC-ug-hHT"/>
                         <outlet property="textValue" destination="BaD-bU-CRA" id="aDB-oQ-Kei"/>
                         <outlet property="viewTitle" destination="wG9-JU-P14" id="ofM-Jt-qTS"/>
                     </connections>

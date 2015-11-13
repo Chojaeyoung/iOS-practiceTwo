@@ -13,14 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewTitle: UINavigationItem!
     
 
+    @IBOutlet weak var goBackFirstButton: UIBarButtonItem!
+    
+    
+    @IBAction func goBackFirstPage(sender: AnyObject) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
             textValue.text = String(delegate.number)
             viewTitle.title = String(delegate.number)
-                delegate.number++
-            print("viewDidLoad", delegate.number)
+            
+            if delegate.number == 1 {
+                goBackFirstButton.enabled = false
+                goBackFirstButton.tintColor = UIColor.clearColor()
+            } else {
+                goBackFirstButton.enabled = true
+                goBackFirstButton.tintColor = nil
+            }
+            
+            delegate.number++
+            print("number is increase", delegate.number)
+            
         }
     }
 
