@@ -17,15 +17,25 @@ class ViewController: UIViewController {
     
     
     @IBAction func goBackFirstPage(sender: AnyObject) {
+        print("touch goBackFisrPage button")
+        /* 네비게이션 컨트롤러의 popToRootViewControllerAnimated는 rootView를 제외하고 다른 view를 pop한다. */
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            delegate.number = 1
+            print("adwqdwdwqwd")
+        }
+
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("viewDidLoad")
         if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            delegate.number++
             textValue.text = String(delegate.number)
             viewTitle.title = String(delegate.number)
+
             
             if delegate.number == 1 {
                 goBackFirstButton.enabled = false
@@ -33,9 +43,9 @@ class ViewController: UIViewController {
             } else {
                 goBackFirstButton.enabled = true
                 goBackFirstButton.tintColor = nil
-            }
+                         }
             
-            delegate.number++
+
             print("number is increase", delegate.number)
             
         }
@@ -55,8 +65,10 @@ class ViewController: UIViewController {
             print("Test print, remove view from parent")
             
             if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                delegate.number--
-                print("number is decrease", delegate.number)
+                if delegate.number != 1 {
+                    delegate.number--
+                    print("number is decrease", delegate.number)
+                }
             }
         }
     }
