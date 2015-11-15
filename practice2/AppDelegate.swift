@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var number = 0
+    var cur_ro_state = 0 // 0 no change rotate, 1 is change
     
 
 
