@@ -14,6 +14,8 @@
 		C76335321BE8BFFB00BCCA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76335301BE8BFFB00BCCA69 /* LaunchScreen.storyboard */; };
 		C763353D1BE8BFFB00BCCA69 /* practice2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C763353C1BE8BFFB00BCCA69 /* practice2Tests.swift */; };
 		C76335481BE8BFFB00BCCA69 /* practice2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76335471BE8BFFB00BCCA69 /* practice2UITests.swift */; };
+		C7F252EB1BFF2C1100E82367 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F252EA1BFF2C1100E82367 /* TableViewController.swift */; };
+		C7F252ED1C01F45400E82367 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F252EC1C01F45400E82367 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C76335431BE8BFFB00BCCA69 /* practice2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = practice2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76335471BE8BFFB00BCCA69 /* practice2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practice2UITests.swift; sourceTree = "<group>"; };
 		C76335491BE8BFFB00BCCA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7F252EA1BFF2C1100E82367 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C7F252EC1C01F45400E82367 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				C76335271BE8BFFB00BCCA69 /* AppDelegate.swift */,
 				C76335291BE8BFFB00BCCA69 /* ViewController.swift */,
 				C763352B1BE8BFFB00BCCA69 /* Main.storyboard */,
+				C7F252EC1C01F45400E82367 /* data.swift */,
+				C7F252EA1BFF2C1100E82367 /* TableViewController.swift */,
 				C763352E1BE8BFFB00BCCA69 /* Assets.xcassets */,
 				C76335301BE8BFFB00BCCA69 /* LaunchScreen.storyboard */,
 				C76335331BE8BFFB00BCCA69 /* Info.plist */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C763352A1BE8BFFB00BCCA69 /* ViewController.swift in Sources */,
+				C7F252EB1BFF2C1100E82367 /* TableViewController.swift in Sources */,
 				C76335281BE8BFFB00BCCA69 /* AppDelegate.swift in Sources */,
+				C7F252ED1C01F45400E82367 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chojaeyoung001.practice2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -417,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chojaeyoung001.practice2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

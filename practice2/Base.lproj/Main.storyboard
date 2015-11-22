@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aqP-Rn-BFZ">
-                                <rect key="frame" x="232" y="196" width="137" height="178"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aqP-Rn-BFZ">
+                                <rect key="frame" x="231" y="211" width="137" height="178"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-bU-CRA">
                                         <rect key="frame" x="24" y="0.0" width="90" height="45"/>
@@ -44,10 +44,14 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="aqP-Rn-BFZ" firstAttribute="centerY" secondItem="wws-uN-Hwt" secondAttribute="centerY" id="45Z-bB-XYA"/>
-                            <constraint firstItem="aqP-Rn-BFZ" firstAttribute="centerX" secondItem="wws-uN-Hwt" secondAttribute="centerX" id="dfu-ra-OnZ"/>
+                            <constraint firstItem="aqP-Rn-BFZ" firstAttribute="centerY" secondItem="wws-uN-Hwt" secondAttribute="centerY" id="cTq-hZ-gqN"/>
+                            <constraint firstItem="aqP-Rn-BFZ" firstAttribute="centerX" secondItem="wws-uN-Hwt" secondAttribute="centerX" id="qft-a3-W18"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fPB-1g-JW4" appends="YES" id="z0E-0L-qMT"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wG9-JU-P14">
@@ -65,8 +69,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="fPB-1g-JW4">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="1YJ-AO-07p"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="PBO-wo-bvP"/>
             </objects>
-            <point key="canvasLocation" x="179" y="384"/>
+            <point key="canvasLocation" x="129" y="358"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="stS-ma-LBo">
@@ -86,6 +96,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgc-M7-QNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="-388"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="MKH-WX-2sz">
+            <objects>
+                <tableViewController storyboardIdentifier="tableView" id="aBD-ND-O0o" customClass="TableViewController" customModule="practice2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WAn-uD-hfr" customClass="Tav">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListCell" textLabel="rEf-cb-vmp" style="IBUITableViewCellStyleDefault" id="WkU-v5-9WT">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WkU-v5-9WT" id="38f-N6-Yba">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="titleLabel" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rEf-cb-vmp">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aBD-ND-O0o" id="mOv-nn-M2r"/>
+                            <outlet property="delegate" destination="aBD-ND-O0o" id="FKm-qw-JhY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePc-dk-B5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="358"/>
         </scene>
     </scenes>
     <resources>
