@@ -50,7 +50,7 @@ class TableViewController: UITableViewController {
 //    원하는데이터를구성하여, 값을넣어주면된다.
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("ListCell", forIndexPath: indexPath)
-        let row = indexPath.row
+        let row = indexPath.row + 1
         print(row, "this is row")
         print(cell, "this is cell")
         cell.textLabel?.text = String(row)
@@ -66,6 +66,7 @@ class TableViewController: UITableViewController {
 //        let aCell = self.tableView.dequeueReusableCellWithIdentifier("cell",forIndexPath: indexPath) as! TableViewCell
         
         print("Ttest TableView")
+        
         
 //        aCell.titleLabel.text = String(delegate?.number)
         

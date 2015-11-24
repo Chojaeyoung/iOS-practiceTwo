@@ -25,18 +25,19 @@ class ViewController: UIViewController {
         /* 네비게이션 컨트롤러의 popToRootViewControllerAnimated는 rootView를 제외하고 다른 view를 pop한다. */
         self.navigationController?.popToRootViewControllerAnimated(true)
         let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
-            delegate!.number = 1
-            print("gobackRootView")
-            
-            /* else문이 실행이 되지만, 뷰에는 적용이 되지 않는다.
-                이벤트가 일어난 뷰랑 달라서 그런건가..? */
-            if(delegate!.cur_ro_state == 0) {
-                textValue.text = String(delegate!.number)
-                viewTitle.title = String(delegate!.number)
-            } else {
-                textValue.text = String(hangle[delegate!.number])
-                viewTitle.title = String(hangle[delegate!.number])
-            }
+        
+        delegate!.number = 1
+        print("gobackRootView")
+        
+        /* else문이 실행이 되지만, 뷰에는 적용이 되지 않는다.
+            이벤트가 일어난 뷰랑 달라서 그런건가..? */
+        if(delegate!.cur_ro_state == 0) {
+            textValue.text = String(delegate!.number)
+            viewTitle.title = String(delegate!.number)
+        } else {
+            textValue.text = String(hangle[delegate!.number])
+            viewTitle.title = String(hangle[delegate!.number])
+        }
     }
     //      오수석님 말씀:
     //          if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
@@ -103,11 +104,11 @@ class ViewController: UIViewController {
             
         } else {
             print("width is low")
-            if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                delegate.cur_ro_state = 0
-                textValue.text = String(delegate.number)
-                viewTitle.title = String(delegate.number)
-            }
+             let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+                delegate!.cur_ro_state = 0
+                textValue.text = String(delegate!.number)
+                viewTitle.title = String(delegate!.number)
+            
         }
         print("rotate view")
         print(size)
@@ -123,11 +124,11 @@ class ViewController: UIViewController {
         if (self.isMovingFromParentViewController()){
             print("Test print, remove view from parent")
             
-            if var delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                if delegate.number != 1 {
-                    delegate.number--
-                    print("number is decrease", delegate.number)
-                }
+            let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
+                if delegate!.number != 1 {
+                    delegate!.number--
+                    print("number is decrease", delegate!.number)
+                
             }
         }
     }
