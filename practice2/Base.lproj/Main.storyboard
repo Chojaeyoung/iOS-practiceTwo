@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="practice2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewCont" id="BYZ-38-t0r" customClass="ViewController" customModule="practice2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vpJ-ZK-Nlb"/>
                         <viewControllerLayoutGuide type="bottom" id="SmI-e6-6cB"/>
@@ -34,7 +34,6 @@
                                             <color key="titleShadowColor" red="0.70353466269999998" green="0.00028757986729999999" blue="0.99640017749999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIs-BD-DIY"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="Swh-Lb-3h5"/>
                                         </connections>
                                     </button>
@@ -66,6 +65,7 @@
                         <outlet property="goBackFirstButton" destination="hVx-ki-9k2" id="SBC-ug-hHT"/>
                         <outlet property="textValue" destination="BaD-bU-CRA" id="aDB-oQ-Kei"/>
                         <outlet property="viewTitle" destination="wG9-JU-P14" id="ofM-Jt-qTS"/>
+                        <segue destination="aBD-ND-O0o" kind="presentation" identifier="segueData" id="6O7-5i-W7A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,12 +76,12 @@
                 </swipeGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="PBO-wo-bvP"/>
             </objects>
-            <point key="canvasLocation" x="129" y="358"/>
+            <point key="canvasLocation" x="33" y="418"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="stS-ma-LBo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4s-tB-JcG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navi" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C4s-tB-JcG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DJO-ug-j99">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -136,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePc-dk-B5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="358"/>
+            <point key="canvasLocation" x="893" y="344"/>
         </scene>
     </scenes>
     <resources>
